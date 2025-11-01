@@ -19,3 +19,8 @@
 
 10. Check if a word is a palindrome ("madam" → true).
 */
+
+//solution 1
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
