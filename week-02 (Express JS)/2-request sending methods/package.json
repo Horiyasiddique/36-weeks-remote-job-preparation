@@ -1,0 +1,29 @@
+{
+  "name": "2-request-sending-methods",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "JS",
+    "express",
+    "JS",
+    "get",
+    "put",
+    "post",
+    "delete",
+    "postman"
+  ],
+  "author": "Hooriya Siddiqui",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
