@@ -112,3 +112,51 @@ app.get("/api/weather", (req, res) => {
 app.listen(port, () => {
   console.log(`app is listening on ${port} port `);
 });
+
+// <<<<<<<<<<<< Practice Question >>>>>>>>>>>>
+
+/**Create a route /api/register that takes { name, email, password } from body and returns "User registered successfully". */
+
+app.get("/api/register", (req, res) => {
+  const { name, email, password } = req.body;
+  if (!name || !email || !password) {
+    res
+      .status(400)
+      .json({ mssg: "Can't register the user, something is missing" });
+  }
+  res.status(200).json({ mssg: `user register succefully!! welcome ${name}` });
+});
+
+// Create /api/sum — take { num1, num2 } from body and return their sum.
+app.get("/api/sum", (req, res) => {
+  const { num1, num2 } = req.body;
+  if (!num1 || !num2) {
+    res.status(400).json({ mssg: "invalid numbers" });
+  }
+  res
+    .status(200)
+    .json({ mssg: `the sum of ${num1} and ${num2} is ${num1 + num2}` });
+});
+
+//Create /api/contact — take { name, message }, if name or message is missing, return an error message.
+app.get("/api/contact", (req, res) => {
+  const { name, message } = req.body;
+  if (!name || !message) {
+    res.status(400).json({ mssg: "somthing is missing ❗❗❗" });
+  }
+  res.status(200).json({ mssg: "contact has been saved succefully" });
+});
+
+//Create /api/product — take { title, price, inStock }, if price < 0, return "Invalid price".
+app.get("/api/product", (req, res) => {
+  const { title, price, inStock } = req.body;
+  if (!title || !price || !inStock) {
+    res.status(400).json({ mssg: "somthing is missing" });
+  }
+  if (price < 0) {
+    res.status(400).json({ mssg: "Invalid price" });
+  }
+  res.status(200).json({mssg: "product uploaded succefully"})
+});
+
+

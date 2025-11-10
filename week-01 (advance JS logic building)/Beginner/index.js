@@ -24,3 +24,31 @@
 for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
+
+//solution 2
+const checkEvenOrOdd = (num) => {
+  if (num % 2 === 0) {
+    console.log(`${num} is even number`);
+  } else {
+    console.log(`${num} is odd number`);
+  }
+};
+checkEvenOrOdd(4);
+checkEvenOrOdd(5);
+
+//solution 3
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+arr.forEach((elem, index) => {
+  let num = 0;
+  num += elem
+  console.log(num)
+
+})
+
+// solution 4 
+const reverseString = (str) => {
+  const str2 = str.reverseString()
+  return str2
+}
+
+console.log(reverseString("hooriya"))
